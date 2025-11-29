@@ -1,0 +1,2 @@
+# IICT_PROJECT_SMARTFOLD
+Project website
