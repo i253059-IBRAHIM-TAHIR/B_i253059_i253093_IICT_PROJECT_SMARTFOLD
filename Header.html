@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fold</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        header {
+            background-color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008080;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .signin-btn {
+            background-color: #000;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, #008080, #20B2AA, #48D1CC);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="PICS/FIGMA CONTENT/website logo.png" alt="Smart Fold Logo" class="logo">
+            <div class="brand-name">SMART FOLD</div>
+        </div>
+        <div class="header-right">
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" placeholder="Search">
+                <span>🎤</span>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Page</a>
+                <a href="#">About</a>
+            </nav>
+            <span class="cart-icon">🛒</span>
+            <button class="signin-btn">SignIn</button>
+        </div>
+    </header>
+
+    <div class="divider"></div>
+
+</body>
+</html>

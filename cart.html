@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fold - My Cart</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+        header {
+            background-color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .brand-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008080;
+        }
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 5px;
+        }
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+        .cart-icon {
+            font-size: 24px;
+            color: #333;
+        }
+        .signin-btn {
+            background-color: #000;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, #008080, #20B2AA, #48D1CC);
+        }
+        .cart-header {
+            background-color: #5f9ea0;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .cart-header-icon {
+            font-size: 40px;
+        }
+        .cart-header h1 {
+            font-size: 32px;
+            font-weight: bold;
+        }
+        .cart-content {
+            display: flex;
+            padding: 40px 60px;
+            gap: 40px;
+        }
+        .cart-items {
+            flex: 2;
+        }
+        .cart-item {
+            display: flex;
+            gap: 30px;
+            padding: 30px 0;
+            border-bottom: 2px solid #ddd;
+        }
+        .item-image {
+            width: 200px;
+            height: 200px;
+        }
+        .item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .item-details {
+            flex: 1;
+        }
+        .item-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .item-price-label {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .item-price {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .remove-btn {
+            background-color: #000;
+            color: white;
+            padding: 10px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .quantity-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .quantity-label {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background-color: #999;
+            padding: 8px 20px;
+            border-radius: 5px;
+        }
+        .quantity-btn {
+            background: none;
+            border: none;
+            font-size: 20px;
+            cursor: pointer;
+            color: white;
+            font-weight: bold;
+        }
+        .quantity-value {
+            font-size: 18px;
+            min-width: 30px;
+            text-align: center;
+            color: white;
+        }
+        .summary-section {
+            flex: 1;
+            background-color: #f5f5f5;
+            padding: 30px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+        .summary-section h2 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 22px;
+        }
+        .summary-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #ccc;
+            font-size: 16px;
+        }
+        .summary-row.total {
+            font-weight: bold;
+            font-size: 18px;
+            border-bottom: 2px solid #000;
+        }
+        .checkout-btn {
+            width: 100%;
+            background-color: #000;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 25px;
+        }
+        .footer {
+            margin-top: 40px;
+            background: #1f1f1f;
+            color: white;
+            padding: 30px 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer h4 {
+            margin-bottom: 10px;
+        }
+        .footer p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+        .social-icons i {
+            font-size: 20px;
+            cursor: pointer;
+        }
+        </style>
+        </head>
+        <body>
+        <header>
+        <div class="logo-section">
+        <img src="PICS/FIGMA CONTENT/website logo.png" alt="Smart Fold Logo" class="logo">
+        <div class="brand-name">SMART FOLD</div>
+        </div>
+        <div class="header-right">
+        <div class="search-box">
+            <span>🔍</span>
+            <input type="text" placeholder="Search">
+            <span>🎤</span>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Page</a>
+                <a href="#">About</a>
+            </nav>
+            <span class="cart-icon">🛒</span>
+            <button class="signin-btn">SignIn</button>
+            </div>
+            </header>
+    <div class="divider"></div>
+    <div class="cart-header">
+        <div class="cart-header-icon">🛒</div>
+        <h1>My Cart</h1>
+    </div>
+    <div class="cart-content">
+    <div class="cart-items">
+    <div class="cart-item">
+    <div class="item-image">
+    <img src="PICS/FIGMA CONTENT/New folder/Product 2.jpeg" alt="Murphy Bed with Desk">
+    </div>
+    <div class="item-details">
+    <div class="item-name">Murphy Bed with Desk</div>
+    <div class="item-price-label">Price</div>
+    <div class="item-price">$1099.9</div>
+    <button class="remove-btn">Remove</button>
+    </div>
+    <div class="quantity-section">
+    <div class="quantity-label">Quantity</div>
+    <div class="quantity-controls">
+    <button class="quantity-btn">-</button>
+    <span class="quantity-value">1</span>
+    <button class="quantity-btn">+</button>
+            </div>
+            </div>
+            </div>
+            <div class="cart-item">
+                <div class="item-image">
+                    <img src="PICS/FIGMA CONTENT/modern-bed-frame-low-profile-upholstered-headboard-isolated-white-background-ai-326110172.jpg" alt="Comfy Bed">
+                </div>
+                <div class="item-details">
+                    <div class="item-name">Comfy bed</div>
+                    <div class="item-price-label">Price</div>
+                    <div class="item-price">$1100.99</div>
+                    <button class="remove-btn">Remove</button>
+                   </div>
+        <div class="quantity-section">
+        <div class="quantity-label">Quantity</div>
+        <div class="quantity-controls">
+        <button class="quantity-btn">-</button>
+        <span class="quantity-value">1</span>
+        <button class="quantity-btn">+</button>                </div>
+        </div>
+        </div>
+        </div>
+            <div class="summary-section">
+            <h2>Summary</h2>
+            <div class="summary-row">
+                <span>Items:</span>
+                <span>2</span>
+            </div>
+            <div class="summary-row">
+                <span>Subtotal:</span>
+                <span>$2200.18</span>
+            </div>
+            <div class="summary-row">
+                <span>Tax:</span>
+                <span>$ 100</span>
+            </div>
+            <div class="summary-row total">
+                <span>Total:</span>
+                <span>$2300.18</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+            </div>
+            <footer class="footer">
+            <div style="text-align:left; width:20%;">
+            <h4>Quick Links:</h4>
+            <p>- About</p>
+            <p>- Items</p>
+            <p>- Forms</p>
+            <p>- Privacy Policy</p>
+            </div>
+            <div style="text-align: left; width:20%; margin-right: 50px">
+            <h4>Contact Us:</h4>
+            <p>Email: support@smartfold.com</p>
+            <p>Phone: +92 3530082447</p>
+            <p>Address: 4 km Raiwind Road</p>
+            <p>Fast Nuces H11/4</p>
+            </div>
+            <div class="social-icons" style="justify-content: center; margin-left:25px;">
+            <h3><strong>Connect with us</strong></h3>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-linkedin"></i>
+             </div>
+            </footer>
+            </body>
+            </html>

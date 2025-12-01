@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Fold</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: white;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo {
+            width: 60px;
+            height: 60px;
+            background-color: #ddd;
+            border-radius: 50%;
+        }
+
+        .brand-name {
+            font-size: 28px;
+            font-weight: bold;
+            color: #008080;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background-color: #f5f5f5;
+            padding: 8px 15px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            padding: 5px;
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+        }
+
+        .cart-icon {
+            font-size: 24px;
+            color: #333;
+        }
+
+        .signin-btn {
+            background-color: #000;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .divider {
+            height: 3px;
+            background: linear-gradient(to right, #008080, #20B2AA, #48D1CC);
+        }
+
+        .main-content {
+            display: flex;
+            padding: 50px;
+            gap: 30px;
+            background-color: white;
+        }
+
+        .left-image {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .left-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about-section {
+            flex: 2;
+            padding: 20px;
+        }
+
+        .about-section h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .achievements-section {
+            padding: 50px;
+            background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .achievements-text {
+            flex: 1;
+        }
+
+        .achievements-text h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .achievements-text p {
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .achievements-image {
+            flex: 1;
+            max-width: 500px;
+            text-align: right;
+        }
+
+        .achievements-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .award-text {
+            text-align: right;
+            margin-top: 10px;
+            color: #333;
+            font-size: 14px;
+        }
+
+       .footer {
+      margin-top: 40px;
+      background: #1f1f1f;
+      color: white;
+      padding: 30px 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+       /* SOCIAL ICONS */
+    .social-icons {
+  display: flex;
+  flex-direction: column;   /*  Make icon vertical */
+  align-items: center;      /*  Centers them  */
+  gap: 12px;                /*  Space between two icons */
+}
+    .social-icons i {
+      font-size: 20px;
+      cursor: pointer;
+      flex-direction: column; 
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-section">
+            <img src="PICS/FIGMA CONTENT/website logo.png" alt="Smart Fold Logo" style="width: 60px; height: 60px; border-radius: 50%;">
+            <div class="brand-name">SMART FOLD</div>
+        </div>
+        <div class="header-right">
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" placeholder="Search">
+                <span>🎤</span>
+            </div>
+            <nav>
+                <a href="#">Home</a>
+                <a href="#">Page</a>
+                <a href="#">About</a>
+            </nav>
+            <span class="cart-icon">🛒</span>
+            <button class="signin-btn">SignIn</button>
+        </div>
+    </header>
+
+    <div class="divider"></div>
+
+    <div class="main-content">
+        <div class="left-image">
+            <img src="PICS/FIGMA CONTENT/aboutus1.png" alt="Smart Fold Interior">
+        </div>
+        <div class="about-section">
+            <h2>ABOUT :</h2>
+            <p>At Smart Fold, we design intelligent, space-saving furniture that adapts to modern living. What began as a small idea to simplify urban spaces has grown into a mission to create furniture that's as functional as it is beautiful. Each piece folds, unfolds, and transforms to fit your life — offering comfort, flexibility, and timeless design.</p>
+            <p>We stand for smart design, sustainability, and quality craftsmanship. Every product is built to last, crafted responsibly, and designed to evolve with you. At Smart Fold, we're helping you make more room for what truly matters — living smarter, lighter, and better</p>
+        </div>
+    </div>
+
+    <div class="achievements-section">
+        <div class="achievements-text">
+            <h2>Achievements :</h2>
+            <p>Recognized for excellence in design and innovation, Smart Fold has earned industry awards that celebrate our commitment to smart, sustainable living.</p>
+        </div>
+        <div class="achievements-image">
+            <img src="PICS/FIGMA CONTENT/aboutus2.png" alt="Award Winning Furniture">
+            <p class="award-text">(#1 at SIT AWARDS)</p>
+        </div>
+    </div>
+
+  <footer class="footer">
+    <div style="text-align:left; width:20%;">
+      <h4>Quick Links:</h4>
+      <p>- About</p>
+      <p>- Items</p>
+      <p>- Forms</p>
+      <p>- Privacy Policy</p>
+    </div>
+
+    <div style="text-align: left; width:20%;margin-right: 50px">
+      <h4>Contact Us:</h4>
+      <p>Email: support@smartfold.com</p>
+      <p>Phone: +92 3530082447</p>
+      <p>Address: 4 km Raiwind Road</p>
+      <p>Fast Nuces H11/4</p>
+    </div>
+      <div class="social-icons" style="justify-content: center ; margin-left:25px;">
+        <h3><strong>Connect with us</strong></h3>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    
+  </footer>
+</body>
+</html>
