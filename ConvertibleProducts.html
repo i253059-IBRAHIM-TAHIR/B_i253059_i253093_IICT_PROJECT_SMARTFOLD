@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Fold - Products</title>
 
-    <!-- CSS link -->
+    <!-- CSS -->
     <link rel="stylesheet" href="ProductListing_page.css">
 
-    <!-- ICONS link  -->
-     <!-- LINK TAKEN FROM GPT -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- The refrence for search bar place -->
 </head>
@@ -25,8 +24,8 @@
 
         <nav>
             <a href="index.html"><strong>Home</strong></a>
-            <a href="#"><strong>Products</strong></a>
-            <a href="#"><strong>About</strong></a>
+            <a href="ProductListing_page.html"><strong>Products</strong></a>
+            <a href="Aboutus.html"><strong>About</strong></a>
         </nav>
 
         <div class="header-buttons">
@@ -36,41 +35,29 @@
                 <!-- added icon of search -->
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-        <div class="header-buttons">
-               <a href="cart.html"><i class="fa-solid fa-cart-plus cart-add"></i></a>
 
-                </div>
-           <a href="login.html"> <button class="signup-btn">Sign In</button></a>
+            <a href="login.html"><button class="signup-btn">Sign In</button></a>
             <i class="fa-solid fa-cart-shopping cart-icon"></i>
         </div>
     </header>
 
     <!-- FILTER  -->
     <section class="filter-section">
-    <button class="filter-btn" onclick="toggleFilterMenu()">
-        <i class="fa-solid fa-filter"></i> Filter
-    </button>
-
-    <div id="filter-menu" class="filter-menu">
-        <p>Simple</p>
-       <a href="ConvertibleProducts.html"> <p>Convertible</p></a>
-        <p>Foldable</p>
-    </div>
-</section>
-
+        <button class="filter-btn"><i class="fa-solid fa-filter"></i> Filter</button>
+    </section>
 
     <!-- PRODUCTS GRID -->
     <section class="products-grid">
 
         <!-- PRODUCT CARD -->
-        <div class="product-card">
-            <img src="PICS/FIGMA CONTENT/Manual_recliner_1.webp" alt="Manual Sofa Recliner Image" class="product-img">
-            <h3>Manual Sofa Recliner</h3>
-            <p class="price">$550</p>
-            <p class="category">Foldable</p>
+       <div class="product-card">
+            <img src="PICS/FIGMA CONTENT/pr 3.jpg" alt="Island Bunk Bed Image" class="product-img">
+            <h3>Island Bunk Bed</h3>
+            <p class="price">$1100</p>
+            <p class="category">Multifunction</p>
             <button class="buy-btn">BUY</button>
             <div class="stars">
-                
+              
             </div>
         </div>
 
@@ -87,10 +74,10 @@
         </div>
 
         <div class="product-card">
-            <img src="PICS/FIGMA CONTENT/Simple.jpg" alt="Classic Bed Image" class="product-img">
-            <h3>Classic Bed</h3>
-            <p class="price">$750</p>
-            <p class="category">Simple</p>
+            <img src="PICS/FIGMA CONTENT/Wall Bed.webp" alt="Wall Bed Image" class="product-img">
+            <h3>Wall Bed</h3>
+            <p class="price">$1200</p>
+            <p class="category">Convertible</p>
             <button class="buy-btn">BUY</button>
             <div class="stars">
                 
@@ -127,60 +114,18 @@
             </div>
         </div>
 
-        <!--  I WILL DUPLICATE THIS BLOCK FOR ALL OTHER PRODUCTS -->
-        <div class="product-card">
-            <img src="PICS/FIGMA CONTENT/pr 3.jpg" alt="Island Bunk Bed Image" class="product-img">
-            <h3>Island Bunk Bed</h3>
-            <p class="price">$1100</p>
-            <p class="category">Multifunction</p>
-            <button class="buy-btn">BUY</button>
-            <div class="stars">
-              
-            </div>
-        </div>
+        
+        
 
-        <div class="product-card">
-            <img src="PICS/FIGMA CONTENT/Morris_Dining_4_1160x_crop_center.webp" alt="Morris Dining Table Image" class="product-img">
-            <h3>Morris Dining Table</h3>
-            <p class="price">$1500</p>
-            <p class="category">Classic</p>
-            <button class="buy-btn">BUY</button>
-            <div class="stars">
-                
-            </div>
-        </div>
+        
 
 
- <div class="product-card">
-            <img src="PICS/FIGMA CONTENT/Wall Bed.webp" alt="Wall Bed Image" class="product-img">
-            <h3>Wall Bed</h3>
-            <p class="price">$1200</p>
-            <p class="category">Convertible</p>
-            <button class="buy-btn">BUY</button>
-            <div class="stars">
-                
-            </div>
+
         <!-- Add more by copying -->
 
     </section>
 
-    <section class="products-grid">
-
-        <!-- PRODUCT CARD -->
-        <div class="product-card">
-            <img src="PICS/FIGMA CONTENT/Gemini_Generated_Image_gquifkgquifkgqui.png" alt="Smart Dining Image" class="product-img">
-            <h3>Smart Dining</h3>
-            <p class="price">$1000</p>
-            <p class="category">Foldable</p>
-            <button class="buy-btn">BUY</button>
-            <div class="stars">
-                
-            </div>
-        </div>
-
-        
-
-    </section>
+   
 
     <!-- FOOTER -->
     <footer>
@@ -210,18 +155,6 @@
             </div>
         </div>
     </footer>
-    <!-- Unique feature of filter button -->
-<script>
-function toggleFilterMenu() {
-    const menu = document.getElementById("filter-menu");
-
-    if (menu.style.maxHeight && menu.style.maxHeight !== "0px") {
-        menu.style.maxHeight = "0px";  // close
-    } else {
-        menu.style.maxHeight = "200px"; // open
-    }
-}
-</script>
 
 </body>
 </html>
