@@ -1,0 +1,86 @@
+/* --- MAIN LAYOUT  */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #ffffff;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDE IMAGE */
+.left-side {
+    flex: 1.5;
+    background-size: cover;
+    background-position: center;
+
+    /* LEFT SIDE IMAGE HERE */
+    background-image: url("PICS/FIGMA CONTENT/BERLIN-WEB-BANNER_.jpg"); /* <--- berlin */
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #029c8a;
+}
+
+.form-box {
+    width: 70%;
+    background: #28d8c3;
+    padding: 30px;
+    text-align: center;
+    border-radius: 5%;
+}
+
+/* --- INPUT FIELDS  */
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+    font-size: 15px;
+}
+
+/* --- SIGN UP BUTTON --- */
+.login-btn {
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: blue;
+}
+
+/* -- SOCIAL LOGIN BUTTONS --*/
+.social-login {
+    margin-top: 20px;
+}
+
+.social-login a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 8px 0;
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 10px;
+    border-radius: 6px;
+    justify-content: center;
+}
