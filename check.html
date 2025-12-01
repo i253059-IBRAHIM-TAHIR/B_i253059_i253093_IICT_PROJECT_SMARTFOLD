@@ -1,17 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Fold - Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f5f5;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      width: 100%;
+      background: #fff;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid #ececec;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 22px;
+      color: #007f5f;
+    }
+
+    .nav-links a {
+      margin-left: 25px;
+      text-decoration: none;
+      font-size: 16px;
+      color: #000;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      width: 100%;
+      height: 440px;
+      background: url('PICS/FIGMA CONTENT/Hero page pic.png') center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      padding-left: 60px;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 35px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      width: 420px;
+      margin-bottom: 15px;
+      line-height: 1.5;
+    }
+
+    /* HOT PRODUCTS */
+    .section {
+      width: 100%;
+      background: #0b6b5c;
+      padding: 25px;
+      color: white;
+      margin-bottom: 40px;   /*  Added spacing below hot selling block */
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .products {
+      display: flex;
+      justify-content: center;
+      gap: 40px;   /*  Equal gap between items */
+      flex-wrap: wrap; /*  Makes symmetric on all screens */
+    }
+
+    .card {
+      background: #fff;
+      width: 230px;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      color: #000;
+    }
+
+    .card img {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .buy-btn {
+      width: 80px;
+      margin-top: 10px;
+      padding: 6px 0;
+      background: #0b6b5c;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    /* CATEGORIES */
+    .categories {
+      padding: 30px;
+      margin-top: 0; 
+    }
+
+    .categories h2 {
+      margin-bottom: 20px;
+      color: #0b6b5c;
+      text-align: center;
+    }
+
+    .cat-grid {
+      display: flex;
+      justify-content: center; 
+      gap: 40px;   /*  Equal spacing */
+      flex-wrap: wrap; /*  Keeps layout symmetric */
+    }
+
+    .cat-item {
+      background: white;
+      border-radius: 10px;
+      padding-bottom: 10px;
+      width: 250px;
+      text-align: center;
+    }
+
+    .cat-item img {
+      width: 100%;
+      height: 170px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .footer {
+      margin-top: 40px;
+      background: #1f1f1f;
+      color: white;
+      padding: 30px 40px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer h4 {
+      margin-bottom: 10px;
+    }
+
+    .footer p {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+
+    /* SOCIAL ICONS */
+    .social-icons {
+  display: flex;
+  flex-direction: column;   /*  Makes icons vertical */
+  align-items: center;      /*  Centers them vertically */
+  gap: 12px;                /*  Space between icons */
+}
+    .social-icons i {
+      font-size: 20px;
+      cursor: pointer;
+      flex-direction: column; 
+    }
+
+  </style>
 </head>
 <body>
-    <section id="Header">
-        <img src="PICS/FIGMA CONTENT/ChatGPT Image Nov 30, 2025, 04_43_17 PM.png" width="50px" height="50px" style="vertical-align: middle;">
 
-        <header id="logo" style="color: teal; display: inline-block; vertical-align: middle;">
-            <strong>SMARTFOLD</strong>
-        </header>
-    </section>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="logo"><img src="PICS/FIGMA CONTENT/ChatGPT Image Nov 30, 2025, 04_43_17 PM.png" style="width:35px; height:35px;" alt="Smart Fold Logo">
+SMART FOLD</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">Page</a>
+      <a href="#">About</a>
+      <button style="padding: 8px 16px; background:#0b6b5c; color:#fff; border:none; border-radius:6px; margin-left: 25px; cursor:pointer;">Sign In</button>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div>
+      <h1>Smart Furniture for Small Spaces.</h1>
+      <p>Stylish, foldable and space-saving furniture designed for modern homes. Transform your space with one product that does it all.</p>
+    </div>
+  </section>
+
+  <!-- HOT SELLING PRODUCTS -->
+  <div class="section">
+    <h2>Hot Selling Products</h2>
+
+    <div class="products">
+
+      <div class="card">
+        <img src="PICS/FIGMA CONTENT/Manual_recliner_1.webp" />
+        <h4>Manual Sofa Recliner</h4>
+        <p>$199</p>
+        <button class="buy-btn">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="PICS/FIGMA CONTENT/SOFA bed.webp" />
+        <h4>Istria Sofa Cum Bed</h4>
+        <p>$150</p>
+        <button class="buy-btn">Buy</button>
+      </div>
+
+      <div class="card">
+        <img src="PICS/FIGMA CONTENT/Wall Bed.webp" />
+        <h4>Wall Bed</h4>
+        <p>$700</p>
+        <button class="buy-btn">Buy</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CATEGORIES -->
+  <section class="categories">
+    <h2>Categories</h2>
+
+    <div class="cat-grid">
+      <div class="cat-item">
+        <img src="PICS/FIGMA CONTENT/Convertible.webp" />
+        <h4>Convertible</h4>
+        <p>Multifunction Furniture</p>
+      </div>
+
+      <div class="cat-item">
+        <img src="PICS/FIGMA CONTENT/land.jpeg" />
+        <h4>Foldable</h4>
+        <p>Save space when not required.</p>
+      </div>
+
+      <div class="cat-item">
+        <img src="PICS/FIGMA CONTENT/Simple.jpg" />
+        <h4>Simple</h4>
+        <p>Decent, Elegant Design</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div style="text-align:left; width:20%;">
+      <h4>Quick Links:</h4>
+      <p>- About</p>
+      <p>- Items</p>
+      <p>- Forms</p>
+      <p>- Privacy Policy</p>
+    </div>
+
+    <div style="text-align: left; width:20%;margin-right: 50px">
+      <h4>Contact Us:</h4>
+      <p>Email: support@smartfold.com</p>
+      <p>Phone: +92 3530082447</p>
+      <p>Address: 4 km Raiwind Road</p>
+      <p>Fast Nuces H11/4</p>
+    </div>
+      <div class="social-icons" style="justify-content: center ; margin-left:25px;">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-youtube"></i>
+        <i class="fa-brands fa-linkedin"></i>
+      </div>
+    
+  </footer>
+
+  <script>
+    document.querySelectorAll('.buy-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Product added to cart!');
+      });
+    });
+  </script>
+
 </body>
 </html>

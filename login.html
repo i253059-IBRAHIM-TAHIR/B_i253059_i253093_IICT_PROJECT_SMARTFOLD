@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <!-- LINK FOR COLORING AND SYLING -->
+     <link rel="stylesheet" href="login.css" />
+     <!-- Icons AND THEIR LOGO -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+     <link rel="stylesheet" href="C:\Users\DELL\Documents\GitHub\IICT_PROJECT_SMARTFOLD\login.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- berlin image on left -->
+        <div class="left-side">
+            </div>
+
+        <!-- RIGHT SIDE  -->
+        <div class="right-side">
+            <div class="form-box">
+                <h2>Sign In</h2>
+
+               <form onsubmit="return loginUser()">
+                <input type="email" id="email" placeholder="Email" required />
+                     <input type="password" id="password" placeholder="Password" required />
+
+                     <a href="#" class="forgot">Forget Password?</a>
+
+                     <button type="submit" class="login-btn">Login</button>
+
+                        <p class="signup-text">
+                           Create an account ? <a href="signup.html">Sign Up</a>
+                       </p>
+              </form>
+
+                    <div class="social-login">
+                        <a href="#" class="fb"><i class="fa-brands fa-facebook"></i> Login with Facebook</a>
+                        <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i> Login with LinkedIn</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+<script>
+function loginUser() {
+    const email = document.getElementById("email").value.trim();
+    const pass = document.getElementById("password").value.trim();
+
+    // If email OR password is empty → do NOT redirect
+    if (email === "" || pass === "") {
+        alert("Please enter both email and password!");
+        return false;
+    }
+
+    // If both fields have values → allow redirection
+    window.location.href = "ProductListing_page.html";
+    return false; // prevents page refresh
+}
+</script>
+
+
+
+</body>
+</html>
+<body>
+    
+</body>
+</html>
